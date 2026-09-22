@@ -1,0 +1,13 @@
+{
+  "workers": 8,
+  "webhooks": {
+    "enabled": true,
+    "only_categories": ["finance", "email"],
+    "discord": {
+      "url": "https://discord.com/api/webhooks/xxx/yyy",
+      "username": "Cookie Checker",
+      "mention_role_id": "",
+      "show_category": true
+    }
+  }
+}

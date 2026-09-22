@@ -1,0 +1,112 @@
+# pyproject.toml — by Qwixx
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "universal-cookie-checker"
+version = "1.0.0"
+description = "Multithreaded cookie checker for 51 services: Binance, Coinbase, PayPal, Stripe, Kraken, MetaMask, OpenSea, Telegram, Instagram, Facebook, VK, WhatsApp, Discord, Twitter/X, Reddit, LinkedIn, TikTok, Twitch, Netflix, Spotify, Proton Mail, Yahoo, Mail.ru, Google, Microsoft 365, Slack, Jira, Notion, Trello, Dropbox, GitHub, GitLab, Bitbucket, AWS, Azure, DigitalOcean, Cloudflare, Steam, Epic Games, Riot Games, Battle.net, Xbox, Roblox, Amazon, eBay, Airbnb, OpenVPN, WireGuard, Adminer, phpMyAdmin. Webhooks, proxy rotation, rate-limit."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Qwixx" }]
+keywords = [
+    "cookies", "checker", "binance", "coinbase", "paypal", "stripe",
+    "kraken", "metamask", "opensea", "telegram", "instagram", "facebook",
+    "vk", "whatsapp", "discord", "twitter", "reddit", "linkedin",
+    "tiktok", "twitch", "netflix", "spotify", "proton", "yahoo",
+    "mailru", "google-workspace", "microsoft-365", "slack", "jira",
+    "notion", "trello", "dropbox", "github", "gitlab", "bitbucket",
+    "aws", "azure", "digitalocean", "cloudflare", "steam", "epic",
+    "riot", "battlenet", "xbox", "roblox", "amazon", "ebay", "airbnb",
+    "openvpn", "wireguard", "webhooks", "proxy", "rate-limit",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Utilities",
+]
+
+dependencies = [
+    "requests>=2.31.0",
+    "colorama>=0.4.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "pytest-mock>=3.12",
+    "ruff>=0.3",
+]
+socks = ["PySocks>=1.7.1"]
+
+[project.urls]
+Homepage = "https://github.com/Qwixx/universal-cookie-checker"
+Issues = "https://github.com/Qwixx/universal-cookie-checker/issues"
+
+[project.scripts]
+cookie-checker = "main:main"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-ra",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+]
+markers = [
+    "network: тесты, которые делают реальные HTTP-запросы",
+    "slow: медленные тесты",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["."]
+omit = [
+    "tests/*",
+    "*/__pycache__/*",
+]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = [".git", "__pycache__", ".venv", "venv", "build", "dist"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM"]
+ignore = [
+    "E501",
+    "N802",
+    "N803",
+    "N806",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "B011"]
