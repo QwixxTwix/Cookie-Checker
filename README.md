@@ -4,6 +4,9 @@
 
 **Auto-detect & validate cookies**
 
+<img width="763" height="432" alt="image" src="https://github.com/user-attachments/assets/7bc6e162-174c-4da2-9b55-fcfcdb64b8ef" />
+
+
 ![Python](https://img.shields.io/badge/Python-3.10%2B-5865F2?style=for-the-badge&logo=python&logoColor=white)
 ![Version](https://img.shields.io/badge/Version-1.0-5865F2?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-5865F2?style=for-the-badge)
@@ -106,6 +109,8 @@ PROXY = None
 
 python
 PROXY = {"http": "http://user:pass@ip:port", "https": "http://user:pass@ip:port"}
+```
+```
 ⚠️ Дисклеймер
 Инструмент создан исключительно в образовательных целях.
 Проверяй только свои cookies.
