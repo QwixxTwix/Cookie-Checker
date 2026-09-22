@@ -1,12 +1,14 @@
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&height=180&color=gradient&text=Universal%20Cookie%20Checker&fontSize=44&fontColor=ffffff&desc=Auto-detect%20%26%20validate%20cookies&descSize=16&descAlignY=68" width="100%"/>
-</div>
 
-<p align="center">
-<img src="https://img.shields.io/badge/Python-3.10%2B-5865F2?style=for-the-badge&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/Version-1.0-5865F2?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/License-MIT-5865F2?style=for-the-badge"/>
-</p>
+# 🍪 Universal Cookie Checker
+
+**Auto-detect & validate cookies**
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-5865F2?style=for-the-badge&logo=python&logoColor=white)
+![Version](https://img.shields.io/badge/Version-1.0-5865F2?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-5865F2?style=for-the-badge)
+
+</div>
 
 ---
 
